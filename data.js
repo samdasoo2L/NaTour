@@ -19,42 +19,43 @@ const TRIP_DATA = {
   // 일정은 날짜별 타임라인에 사용합니다.
   // category는 식사/쇼핑/관광/기타 중 하나이며, detailId는 해당 팝업 데이터와 연결됩니다.
   schedule: [
-    { id: "outbound-flight", date: "2026-10-29", time: "20:25 (한국 시간)", timeStatus: "확정 안내", category: "기타", title: "나트랑행 항공편 출발", place: "대구공항", transport: "트리니티항공 · 대구 → 나트랑", note: "항공편명 미정" },
-    { id: "arrival", date: "2026-10-29", time: "23:35 (나트랑 시간)", timeStatus: "확정 안내", category: "기타", title: "나트랑 도착", place: "나트랑 공항", transport: "트리니티항공" },
+    { id: "outbound-flight", date: "2026-10-29", time: "20:25 (한국 시간)", timeStatus: "확정", category: "기타", title: "나트랑행 항공편 출발", place: "대구공항", transport: "트리니티항공 · 대구 → 나트랑" },
+    { id: "arrival", date: "2026-10-29", time: "23:35 (나트랑 시간)", timeStatus: "확정", category: "기타", title: "나트랑 도착", place: "나트랑 공항", transport: "트리니티항공" },
     { id: "hotel-transfer-1", date: "2026-10-29", time: "도착 후 약 1시간", timeStatus: "대략", category: "기타", title: "호텔 이동", place: "하바나 나트랑 호텔", transport: "택시", note: "교통 상황에 따라 변동" },
     { id: "hotel-checkin-1", date: "2026-10-30", time: "약 01:00", timeStatus: "대략", category: "기타", title: "체크인 및 취침", place: "하바나 나트랑 호텔", note: "예상 체크인 시각" },
 
-    { id: "breakfast-1", date: "2026-10-30", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식", place: "하바나 나트랑 호텔", detailId: "hotel-breakfast" },
+    { id: "breakfast-1", date: "2026-10-30", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "hotel-breakfast" },
     { id: "hotel-departure-1", date: "2026-10-30", time: "약 10:30", timeStatus: "대략", category: "기타", title: "호텔 출발", place: "하바나 나트랑 호텔", transport: "도보", note: "11:00 식사 장소 도착 목표" },
-    { id: "kuukuu-lunch", date: "2026-10-30", time: "11:00", timeStatus: "확정", category: "식사", title: "점심", place: "쿠우쿠우", detailId: "kuukuu" },
-    { id: "lotte-shopping", date: "2026-10-30", time: "점심 후 · 시간 미정", timeStatus: "시간 미정", category: "쇼핑", title: "장보기", place: "롯데마트", detailId: "lotte-mart" },
+    { id: "kuukuu-lunch", date: "2026-10-30", time: "11:00", timeStatus: "확정", category: "식사", title: "점심 식사", place: "쿠우쿠우", reservation: "예약 완료", detailId: "kuukuu" },
+    { id: "lotte-shopping", date: "2026-10-30", time: "약 12:30", timeStatus: "대략", category: "쇼핑", title: "마트 쇼핑", place: "롯데마트", transport: "도보 예정", detailId: "lotte-mart" },
     { id: "dam-shopping", date: "2026-10-30", time: "약 14:00", timeStatus: "대략", category: "쇼핑", title: "시장 쇼핑", place: "담시장", transport: "도보 예정", detailId: "dam-market" },
     { id: "massage-cafe-1", date: "2026-10-30", time: "15:00 이후 · 시간 미정", timeStatus: "시간 미정", category: "기타", title: "발 마사지 및 카페", place: "마사지샵·주변 카페", note: "샵과 예약 여부 미정" },
     { id: "moc-restaurant", date: "2026-10-30", time: "18:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "목식당", transport: "택시 예정", reservation: "예약 완료", detailId: "moc-restaurant" },
-    { id: "hotel-rooftop", date: "2026-10-30", time: "식사 후 · 시간 미정", timeStatus: "시간 미정", category: "기타", title: "루프탑 방문", place: "하바나 나트랑 호텔", transport: "택시 예정" },
+    { id: "hotel-rooftop", date: "2026-10-30", time: "약 20:30", timeStatus: "대략", category: "기타", title: "루프탑 방문", place: "하바나 나트랑 호텔", transport: "택시 예정" },
 
-    { id: "breakfast-2", date: "2026-10-31", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식", place: "하바나 나트랑 호텔", detailId: "hotel-breakfast" },
+    { id: "breakfast-2", date: "2026-10-31", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "hotel-breakfast" },
     { id: "havana-checkout", date: "2026-10-31", time: "10:30", timeStatus: "확정", category: "기타", title: "체크아웃", place: "하바나 나트랑 호텔", note: "짐 보관·운반 방법 확인 필요" },
-    { id: "an-thoi-lunch", date: "2026-10-31", time: "11:00", timeStatus: "확정", category: "식사", title: "점심", place: "안토이", transport: "전세 버스 예정", detailId: "an-thoi" },
+    { id: "an-thoi-lunch", date: "2026-10-31", time: "11:00", timeStatus: "확정", category: "식사", title: "점심 식사", place: "안토이", transport: "전세 버스 예정", detailId: "an-thoi" },
     { id: "long-son", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "1순위 관광 후보", place: "롱선사", detailId: "long-son-pagoda", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
     { id: "ponagar", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "2순위 관광 후보", place: "포나가르 사원", detailId: "ponagar-towers", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
     { id: "hon-chong", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "3순위 관광 후보", place: "혼총곶", detailId: "hon-chong", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
     { id: "alibu-checkin", date: "2026-10-31", time: "14:00", timeStatus: "확정", category: "기타", title: "체크인", place: "알리부 리조트", transport: "전세 버스 예정" },
-    { id: "resort-time", date: "2026-10-31", time: "14:00~19:00", timeStatus: "계획 시간", category: "기타", title: "리조트 즐기기", place: "알리부 리조트", note: "스노클링·해변 이용 예정" },
-    { id: "veteran-dinner", date: "2026-10-31", time: "19:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "베테랑", transport: "택시", detailId: "veteran" },
-    { id: "sailing-club", date: "2026-10-31", time: "21:00", timeStatus: "확정", category: "기타", title: "세일링클럽 방문", place: "세일링클럽", transport: "도보 예정" },
-    { id: "resort-return", date: "2026-10-31", time: "22:30", timeStatus: "시간 안내됨", category: "기타", title: "숙소 복귀", place: "알리부 리조트", note: "복귀 교통수단 확인 필요" },
+    { id: "resort-time", date: "2026-10-31", time: "14:00~19:00", timeStatus: "계획 시간", category: "관광", title: "리조트 즐기기", place: "알리부 리조트", note: "스노클링·해변 이용 예정", detailId: "alibu-resort" },
+    { id: "veteran-departure", date: "2026-10-31", time: "18:30", timeStatus: "확정", category: "기타", title: "호텔 출발", place: "알리부 리조트", transport: "택시 · 베테랑까지 약 30분" },
+    { id: "veteran-dinner", date: "2026-10-31", time: "19:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "베테랑", transport: "택시", reservation: "예약 완료", detailId: "veteran" },
+    { id: "sailing-club", date: "2026-10-31", time: "21:00", timeStatus: "확정", category: "관광", title: "세일링클럽 방문", place: "세일링클럽", transport: "도보 예정", detailId: "sailing-club" },
+    { id: "resort-return", date: "2026-10-31", time: "22:30", timeStatus: "시간 안내됨", category: "기타", title: "숙소 복귀", place: "알리부 리조트", transport: "택시 · 약 30분" },
 
-    { id: "breakfast-3", date: "2026-11-01", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식", place: "알리부 리조트", detailId: "hotel-breakfast" },
+    { id: "breakfast-3", date: "2026-11-01", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "알리부 리조트", detailId: "hotel-breakfast" },
     { id: "alibu-checkout", date: "2026-11-01", time: "12:00", timeStatus: "확정", category: "기타", title: "체크아웃", place: "알리부 리조트", transport: "전일 대절 차량" },
-    { id: "pho-hanh-phuc", date: "2026-11-01", time: "13:00", timeStatus: "시간 안내됨", category: "식사", title: "점심", place: "포한푹", transport: "전일 대절 차량", detailId: "pho-hanh-phuc" },
+    { id: "pho-hanh-phuc", date: "2026-11-01", time: "13:00", timeStatus: "시간 안내됨", category: "식사", title: "점심 식사", place: "포한푹", transport: "전일 대절 차량", detailId: "pho-hanh-phuc" },
     { id: "free-time", date: "2026-11-01", time: "점심 후~17:00", timeStatus: "시간 미정", category: "기타", title: "일정 미정", place: "미정", note: "일정 확정 후 추가 예정" },
-    { id: "massage-final", date: "2026-11-01", time: "17:00", timeStatus: "확정", category: "기타", title: "마사지", place: "마사지샵 미정", reservation: "예약 완료" },
+    { id: "massage-final", date: "2026-11-01", time: "17:00", timeStatus: "확정", category: "기타", title: "마사지", place: "마사지샵 미정" },
     { id: "chon-chon-kim", date: "2026-11-01", time: "19:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "촌촌킴", transport: "전일 대절 차량", reservation: "예약 완료", detailId: "chon-chon-kim" },
     { id: "airport-departure", date: "2026-11-01", time: "21:00", timeStatus: "확정", category: "기타", title: "공항 출발", place: "나트랑 공항", transport: "전일 대절 차량" },
     { id: "airport-arrival", date: "2026-11-01", time: "약 22:00", timeStatus: "대략", category: "기타", title: "공항 도착 예정", place: "나트랑 공항" },
-    { id: "return-flight", date: "2026-11-02", time: "00:35 (나트랑 시간)", timeStatus: "확정 안내", category: "기타", title: "대구행 항공편 출발", place: "나트랑 공항", transport: "트리니티항공 · 나트랑 → 대구", note: "항공편명 미정" },
-    { id: "return-arrival", date: "2026-11-02", time: "07:10 (한국 시간)", timeStatus: "확정 안내", category: "기타", title: "대구 도착 예정", place: "대구공항", transport: "트리니티항공" }
+    { id: "return-flight", date: "2026-11-02", time: "00:35 (나트랑 시간)", timeStatus: "확정", category: "기타", title: "대구행 항공편 출발", place: "나트랑 공항", transport: "트리니티항공 · 나트랑 → 대구" },
+    { id: "return-arrival", date: "2026-11-02", time: "07:10 (한국 시간)", timeStatus: "확정", category: "기타", title: "대구 도착 예정", place: "대구공항", transport: "트리니티항공" }
   ],
 
   // 아래 식사 내용·메뉴는 모두 목업 예시이며 실제 식당 메뉴와 다를 수 있습니다.
@@ -163,6 +164,20 @@ const TRIP_DATA = {
       photo: "assets/attractions/attraction-mock.svg",
       description: "해안 관광지 카드의 임시 설명입니다. 방문 전 관람 정보와 이동 계획을 확인하세요.",
       visitDuration: "목업: 약 30~60분"
+    },
+    "alibu-resort": {
+      name: "알리부 리조트 (목업)",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Alibu+Resort+Nha+Trang",
+      photo: "assets/attractions/attraction-mock.svg",
+      description: "알리부 리조트에서 스노클링과 해변을 즐길 예정입니다. 이용 가능 시설과 운영 시간은 리조트에 확인해 주세요.",
+      visitDuration: "14:00~19:00 예정"
+    },
+    "sailing-club": {
+      name: "세일링클럽 (목업)",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Sailing+Club+Nha+Trang",
+      photo: "assets/attractions/attraction-mock.svg",
+      description: "나트랑 해변에 있는 세일링클럽을 방문할 예정입니다. 영업 시간과 입장 조건은 방문 전에 확인해 주세요.",
+      visitDuration: "방문 시간에 따라 조정"
     }
   }
 };

@@ -77,7 +77,7 @@ h1, h2, h3, p { margin-top: 0; }
 .section-heading .eyebrow { margin-bottom: 9px; }
 .section-heading h2 { margin: 0; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -.06em; }
 .heading-aside { margin: 0 0 3px; color: var(--muted); font-size: 11px; line-height: 1.8; text-align: right; }
-.overview-grid { margin-top: 29px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.overview-grid { margin-top: 29px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .overview-card { min-height: 165px; padding: 20px 23px; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; background: var(--white); border: 1px solid #e9e8df; }
 .overview-number { position: absolute; top: 19px; right: 21px; color: #b4bdb5; font-size: 10px; letter-spacing: .1em; }
 .overview-label { color: var(--muted); font-size: 8px; letter-spacing: .17em; }
@@ -114,16 +114,30 @@ h1, h2, h3, p { margin-top: 0; }
 .timeline-item.category-쇼핑 .rail-dot { background: var(--yellow); box-shadow: 0 0 0 1px #c69739; }
 .timeline-item.category-관광 .rail-dot { background: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
 .schedule-card { width: 100%; min-height: 76px; margin-bottom: 10px; padding: 15px 17px; display: flex; justify-content: space-between; align-items: center; gap: 14px; color: var(--ink); background: var(--white); border: 1px solid #e4e6dd; border-radius: 4px; text-align: left; }
-button.schedule-card { cursor: pointer; transition: transform .18s, box-shadow .18s, border-color .18s; }
+.timeline-item.category-식사 .schedule-card { background-color: #fff4ef; border-color: #f0ddd4; }
+.timeline-item.category-쇼핑 .schedule-card { background-color: #fff9e9; border-color: #eee3c6; }
+.timeline-item.category-관광 .schedule-card { background-color: #edf6f5; border-color: #d5e6e3; }
+button.schedule-card { cursor: pointer; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background-color .28s ease; }
 button.schedule-card:hover { transform: translateY(-2px); border-color: #9bb4a8; box-shadow: 0 9px 22px rgba(27,57,52,.08); }
+.timeline-item.category-식사 button.schedule-card:hover { background-color: #fff7f3; border-color: #e8b2a2; box-shadow: 0 9px 24px rgba(194,103,79,.14); }
+.timeline-item.category-쇼핑 button.schedule-card:hover { background-color: #fffaf0; border-color: #e3cb8f; box-shadow: 0 9px 24px rgba(185,143,56,.15); }
+.timeline-item.category-관광 button.schedule-card:hover { background-color: #f3fafa; border-color: #a8c9c8; box-shadow: 0 9px 24px rgba(66,129,133,.15); }
+button.schedule-card:hover .category-icon { transform: scale(1.16); }
+.timeline-item.category-식사 button.schedule-card:hover .category-icon { transform: rotate(-12deg) scale(1.2); }
+.timeline-item.category-쇼핑 button.schedule-card:hover .category-icon { transform: translateY(-2px) rotate(8deg) scale(1.16); }
+.timeline-item.category-관광 button.schedule-card:hover .category-icon { transform: translateY(-2px) scale(1.2); }
 button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #d68d6e; outline-offset: 3px; }
 .schedule-main { min-width: 0; }
 .schedule-topline { margin-bottom: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
 .category-badge, .status-badge, .reservation-badge { padding: 4px 7px; display: inline-flex; align-items: center; border-radius: 2px; font-size: 8px; font-weight: 700; line-height: 1.2; }
+.category-badge { gap: 5px; }
+.category-icon { display: inline-grid; place-items: center; min-width: 13px; font-size: 11px; line-height: 1; transition: transform .22s ease; }
 .category-badge { color: var(--green); background: #e5eee7; }
 .category-badge.meal { color: #a54f3e; background: #f8e7df; }
 .category-badge.shop { color: #8b6929; background: #f7efd8; }
 .category-badge.sight { color: #3d7176; background: #e2eeee; }
+.category-badge.other { color: #6d6a56; background: #eeede4; }
+.category-badge.other .category-icon { color: #a7833c; font-size: 13px; }
 .status-badge { color: #61746d; background: #edf0e9; font-weight: 500; }
 .reservation-badge { color: #fff; background: var(--green); }
 .schedule-title { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -.025em; }
@@ -184,6 +198,7 @@ button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, but
   .hero-copy { padding-left: 0; }
   .hero h1 { font-size: clamp(52px, 7vw, 70px); }
   .hero-visual img { height: 330px; }
+  .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .timeline-layout { grid-template-columns: minmax(0,1fr) 205px; gap: 25px; }
   .timeline-item { grid-template-columns: 78px 20px minmax(0,1fr); gap: 10px; }
   .timeline-time { font-size: 10px; }

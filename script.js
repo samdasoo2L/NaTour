@@ -21,6 +21,7 @@
   let lastFocusedElement = null;
 
   const categoryClass = { 식사: "meal", 쇼핑: "shop", 관광: "sight", 기타: "other" };
+  const categoryIcon = { 식사: "🍽️", 쇼핑: "🛍️", 관광: "🏝️", 기타: "✦" };
   const detailsByCategory = { 식사: trip.meals || {}, 쇼핑: trip.shopping || {}, 관광: trip.attractions || {} };
 
   function makeElement(tag, className, text) {
@@ -131,7 +132,6 @@
     const time = makeElement("div", "timeline-time");
     const timeText = makeElement("span", "", item.time || "시간 미정");
     time.append(timeText);
-    if (item.timeStatus) time.append(makeElement("small", "", item.timeStatus));
 
     const rail = makeElement("div", "timeline-rail");
     rail.setAttribute("aria-hidden", "true");
@@ -148,7 +148,11 @@
 
     const main = makeElement("div", "schedule-main");
     const topLine = makeElement("div", "schedule-topline");
-    topLine.append(makeElement("span", `category-badge ${category}`, item.category || "기타"));
+    const categoryBadge = makeElement("span", `category-badge ${category}`);
+    const categorySymbol = makeElement("span", "category-icon", categoryIcon[item.category] || categoryIcon.기타);
+    categorySymbol.setAttribute("aria-hidden", "true");
+    categoryBadge.append(categorySymbol, makeElement("span", "", item.category || "기타"));
+    topLine.append(categoryBadge);
     if (item.timeStatus) topLine.append(makeElement("span", "status-badge", item.timeStatus));
     if (item.reservation) topLine.append(makeElement("span", "reservation-badge", item.reservation));
     main.append(topLine);
