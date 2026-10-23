@@ -17,12 +17,44 @@
   const daySummary = document.querySelector("#day-summary");
   const modal = document.querySelector("#detail-modal");
   const modalContent = document.querySelector("#modal-content");
+  const textSizeControl = document.querySelector(".text-size-control");
   let activeIndex = 0;
   let lastFocusedElement = null;
+  let textSize = localStorage.getItem("trip-text-size") || "normal";
+  let textSizeBaselines = new WeakMap();
 
   const categoryClass = { 식사: "meal", 쇼핑: "shop", 관광: "sight", 기타: "other" };
   const categoryIcon = { 식사: "🍽️", 쇼핑: "🛍️", 관광: "🏝️", 기타: "✦" };
   const detailsByCategory = { 식사: trip.meals || {}, 쇼핑: trip.shopping || {}, 관광: trip.attractions || {} };
+
+  function applyTextSize() {
+    const scale = { small: 1, normal: 1.2, large: 1.45 }[textSize] || 1.2;
+    document.querySelectorAll("body *:not(.text-size-control):not(.text-size-control *)").forEach(element => {
+      if (!textSizeBaselines.has(element)) {
+        textSizeBaselines.set(element, Number.parseFloat(getComputedStyle(element).fontSize));
+      }
+      element.style.fontSize = `${textSizeBaselines.get(element) * scale}px`;
+    });
+    textSizeControl?.querySelectorAll("[data-text-size]").forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.textSize === textSize));
+    });
+  }
+
+  textSizeControl?.addEventListener("click", event => {
+    const button = event.target.closest("[data-text-size]");
+    if (!button) return;
+    textSize = button.dataset.textSize;
+    localStorage.setItem("trip-text-size", textSize);
+    applyTextSize();
+  });
+
+  window.addEventListener("resize", () => {
+    document.querySelectorAll("body *:not(.text-size-control):not(.text-size-control *)").forEach(element => {
+      element.style.removeProperty("font-size");
+    });
+    textSizeBaselines = new WeakMap();
+    applyTextSize();
+  });
 
   function makeElement(tag, className, text) {
     const element = document.createElement(tag);
@@ -124,6 +156,7 @@
     }
 
     entries.forEach(item => timeline.append(renderScheduleItem(item)));
+    applyTextSize();
   }
 
   function renderScheduleItem(item) {
@@ -196,6 +229,7 @@
     if (scheduleItem.category === "관광") renderAttractionContent(body, data);
 
     modalContent.append(body);
+    applyTextSize();
     if (!modal.open) modal.showModal();
     document.body.classList.add("modal-open");
     modal.querySelector(".modal-close")?.focus();
@@ -251,4 +285,5 @@
   activeIndex = initialDayIndex();
   renderTabs();
   renderDay();
+  applyTextSize();
 })();

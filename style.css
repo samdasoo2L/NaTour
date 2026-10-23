@@ -169,6 +169,14 @@ button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, but
 .site-footer > p span { padding-inline: 5px; color: var(--coral); }
 .back-top { color: var(--green); text-decoration: none; font-size: 9px; font-weight: 700; letter-spacing: .1em; }
 
+.text-size-control { position: fixed; z-index: 10; right: 22px; bottom: 20px; padding: 10px 12px; display: grid; gap: 7px; border: 1px solid #dce3d9; border-radius: 10px; background: rgba(255,254,250,.96); box-shadow: 0 8px 28px rgba(23,59,57,.15); backdrop-filter: blur(10px); }
+.text-size-label { color: var(--ink-soft); font-size: 11px; font-weight: 700; text-align: center; }
+.text-size-options { display: flex; gap: 5px; }
+.text-size-options button { min-width: 38px; min-height: 36px; padding: 6px 8px; border: 1px solid #d9e1d8; border-radius: 6px; color: var(--green-deep); background: #f7f8f2; cursor: pointer; font-size: 15px; font-weight: 700; transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease; }
+.text-size-options button:hover { transform: translateY(-1px); border-color: #8eaa9b; }
+.text-size-options button[aria-pressed="true"] { color: white; background: var(--green); border-color: var(--green); }
+.text-size-options button:focus-visible { outline: 3px solid #d68d6e; outline-offset: 2px; }
+
 .detail-modal { width: min(690px, calc(100% - 30px)); max-width: none; max-height: min(88vh, 860px); padding: 0; overflow: auto; color: var(--ink); background: var(--white); border: 0; border-radius: 6px; box-shadow: 0 28px 100px rgba(15, 35, 31, .32); }
 .detail-modal::backdrop { background: rgba(14, 35, 32, .68); backdrop-filter: blur(4px); }
 .detail-modal[open] { animation: modal-in .2s ease-out; }
@@ -272,6 +280,9 @@ button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, but
   .site-footer { min-height: 95px; flex-wrap: wrap; padding-block: 19px; }
   .site-footer > p { order: 3; width: 100%; }
   .back-top { font-size: 8px; }
+  .text-size-control { right: 12px; bottom: 12px; padding: 8px; gap: 5px; }
+  .text-size-label { font-size: 10px; }
+  .text-size-options button { min-width: 34px; min-height: 34px; padding: 5px; }
   .detail-modal { width: calc(100% - 20px); max-height: 90vh; border-radius: 5px; }
   .modal-hero { height: 215px; }
   .modal-body { padding: 21px 18px 0; }
