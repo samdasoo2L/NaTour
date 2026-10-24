@@ -17,6 +17,8 @@
   const daySummary = document.querySelector("#day-summary");
   const modal = document.querySelector("#detail-modal");
   const modalContent = document.querySelector("#modal-content");
+  const imagePreviewModal = document.querySelector("#image-preview-modal");
+  const imagePreview = document.querySelector("#image-preview");
   const textSizeControl = document.querySelector(".text-size-control");
   let activeIndex = 0;
   let lastFocusedElement = null;
@@ -256,6 +258,13 @@
     modal.querySelector(".modal-close")?.focus();
   }
 
+  function openImagePreview(src, alt) {
+    imagePreview.src = src;
+    imagePreview.alt = `${alt} 확대 이미지`;
+    imagePreviewModal.showModal();
+    imagePreviewModal.querySelector(".modal-close")?.focus();
+  }
+
   function renderMealContent(body, data) {
     const list = makeElement("div", "modal-list");
     (data.menus || []).forEach(menu => {
@@ -272,15 +281,27 @@
   }
 
   function renderShoppingContent(body, data) {
+    appendIf(body, "p", "shopping-description", data.description);
     const list = makeElement("div", "modal-list");
     (data.items || []).forEach(item => {
       const entry = makeElement("article", "detail-entry");
       const image = document.createElement("img");
       configureImage(image, item.photo, item.name, "assets/shopping/item-mock.svg");
+      if (item.zoomable) {
+        const zoomButton = makeElement("button", "zoom-image-button");
+        zoomButton.type = "button";
+        zoomButton.setAttribute("aria-label", `${item.name} 확대해서 보기`);
+        zoomButton.append(image);
+        zoomButton.addEventListener("click", () => openImagePreview(item.photo, item.name));
+        entry.append(zoomButton);
+      } else {
+        entry.append(image);
+      }
       const copy = makeElement("div", "");
       copy.append(makeElement("h3", "", item.name));
+      appendIf(copy, "p", "", item.description);
       appendIf(copy, "p", "price-range", item.priceRange);
-      entry.append(image, copy);
+      entry.append(copy);
       list.append(entry);
     });
     body.append(list);
@@ -303,6 +324,10 @@
   });
   modal.querySelector(".modal-close")?.addEventListener("click", () => modal.close());
   document.querySelector(".flight-ticket-button")?.addEventListener("click", openFlightTicket);
+  imagePreviewModal.addEventListener("click", event => {
+    if (event.target === imagePreviewModal) imagePreviewModal.close();
+  });
+  imagePreviewModal.querySelector(".modal-close")?.addEventListener("click", () => imagePreviewModal.close());
 
   activeIndex = initialDayIndex();
   renderTabs();

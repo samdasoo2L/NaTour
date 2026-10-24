@@ -140,25 +140,50 @@ const TRIP_DATA = {
     }
   },
 
-  // 물품명·가격은 예시용 목업이며 담시장/마트의 실제 판매 가격이 아닙니다.
+  // 쇼핑 정보와 시세는 사용자가 제공한 여행 참고 정보입니다.
   shopping: {
     "lotte-mart": {
-      name: "롯데마트 (목업)",
+      name: "롯데마트 추천 쇼핑",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Nha+Trang",
-      photo: "assets/shopping/shopping-mock.svg",
+      photo: "assets/shopping/롯데마트메인.jpeg",
       items: [
-        { name: "커피·간식류 (목업)", photo: "assets/shopping/item-mock.svg", priceRange: "가격 정보 입력 예정 (목업)" },
-        { name: "여행용 소품 (목업)", photo: "assets/shopping/item-mock.svg", priceRange: "가격 정보 입력 예정 (목업)" }
+        { name: "코코넛칩", photo: "assets/shopping/롯데마트1.png", description: "바삭하고 고소해서 정말 맛있어요." },
+        { name: "옥수수 과자", photo: "assets/shopping/롯데마트2.png", description: "이것도 정말 맛있어서 추천해요." },
+        { name: "HAKU 코코넛 과자", photo: "assets/shopping/롯데마트3.png", description: "코코넛 풍미가 맛있는 과자예요." },
+        { name: "마카로니 과자", photo: "assets/shopping/롯데마트4.png", description: "짭짤하고 고소하며 살짝 매콤하고 바삭해요." },
+        { name: "Archcafe 코코넛 커피", photo: "assets/shopping/롯데마트5.png", description: "12스틱 한 박스예요. 파란색 박스 제품을 추천해요." },
+        { name: "Chin-Su 칠리소스", photo: "assets/shopping/롯데마트6.png", description: "250g 튜브형이에요. 튀김이나 만두를 먹을 때 감칠맛을 살려주는 마법 소스예요." },
+        { name: "Golden Farm 과일청", photo: "assets/shopping/롯데마트7.png", description: "과일 본연의 진한 맛을 살린 과일청이에요. 탄산수·요거트·칵테일 등에 섞어 즐길 수 있어요.", priceRange: "사진 속 가격 참고: 패션후르츠 135,000동 · 망고 129,000동 · 딸기 115,000동 · 복숭아 122,000동 · 리치 155,000동 · 블루베리 162,000동 · 오디·키위 129,000동 · 핑크 구아바 135,000동 · 라즈베리 155,000동" },
+        { name: "Orion An 해초 구운 쌀 과자", photo: "assets/shopping/롯데마트8.png", description: "짭조름해서 간단한 안주로 딱 좋아요." }
       ]
     },
     "dam-market": {
-      name: "담시장 (목업)",
+      name: "담시장 시세",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Dam+Market+Nha+Trang",
-      photo: "assets/shopping/shopping-mock.svg",
+      photo: "assets/shopping/담시장메인.png",
+      description: "신관(네모 건물)으로 가세요. 구관(둥근 건물)은 이번 일정에서 방문하지 않아도 됩니다.\n\n신관 1층: 건어물·커피·과자·젤리\n신관 2층: 캐리어·의류·크록스·잡화\n신관 3층: 이미테이션 의류·골프웨어\n\n참고: 화장실 이용료는 5,000동이며 위생 상태가 좋지 않다고 해요.",
       items: [
-        { name: "말린 과일 (목업)", photo: "assets/shopping/item-mock.svg", priceRange: "가격 조사 후 입력 (목업)" },
-        { name: "라탄·기념품 소품 (목업)", photo: "assets/shopping/item-mock.svg", priceRange: "가격 조사 후 입력 (목업)" },
-        { name: "의류·가방 (목업)", photo: "assets/shopping/item-mock.svg", priceRange: "가격 조사 후 입력 (목업)" }
+        { name: "크록스", photo: "assets/shopping/담시장의류.png", priceRange: "크록스 100,000~150,000동" },
+        { name: "반팔 티셔츠", photo: "assets/shopping/담시장의류.png", priceRange: "80,000~120,000동" },
+        { name: "긴팔·후드티", photo: "assets/shopping/담시장의류.png", priceRange: "150,000~220,000동" },
+        { name: "바람막이", photo: "assets/shopping/담시장의류.png", priceRange: "110,000~150,000동" },
+        { name: "원피스", photo: "assets/shopping/담시장의류.png", priceRange: "100,000~150,000동" },
+        { name: "캐리어 20인치", photo: "assets/shopping/담시장캐리어.png", priceRange: "280,000동" },
+        { name: "캐리어 24인치", photo: "assets/shopping/담시장캐리어.png", priceRange: "300,000동" },
+        { name: "캐리어 28인치", photo: "assets/shopping/담시장캐리어.png", priceRange: "480,000동" },
+        { name: "샤오커오라", photo: "assets/shopping/담시장간식.png", priceRange: "500g 60,000동 · 1kg 110,000동 · 2.5kg 280,000동" },
+        { name: "체리쉬 푸딩", photo: "assets/shopping/담시장간식.png", priceRange: "800g 40,000동" },
+        { name: "체리쉬 젤리", photo: "assets/shopping/담시장간식.png", priceRange: "280g 25,000동" },
+        { name: "건망고", photo: "assets/shopping/담시장간식.png", priceRange: "500g 60,000동" },
+        { name: "애플 건망고", photo: "assets/shopping/담시장간식.png", priceRange: "500g 80,000동" },
+        { name: "마카다미아", photo: "assets/shopping/담시장간식.png", priceRange: "500g 100,000동" },
+        { name: "캐슈넛", photo: "assets/shopping/담시장간식.png", priceRange: "70,000동" },
+        { name: "컹커피", photo: "assets/shopping/담시장간식.png", priceRange: "100개 320,000동" },
+        { name: "하트 치약", photo: "assets/shopping/담시장간식.png", priceRange: "50,000~60,000동" },
+        { name: "베리 수박 치약", photo: "assets/shopping/담시장간식.png", priceRange: "45,000동" },
+        { name: "마그넷", photo: "assets/shopping/담시장간식.png", priceRange: "30,000동" },
+        { name: "거북이 줄자", photo: "assets/shopping/담시장간식.png", priceRange: "30,000동" },
+        { name: "담시장 시세 종합표", photo: "assets/shopping/담시장종합.png", priceRange: "글씨가 작으면 이미지를 눌러 확대해서 확인하세요.", zoomable: true }
       ]
     }
   },

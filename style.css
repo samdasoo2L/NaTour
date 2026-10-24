@@ -195,9 +195,18 @@ button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, but
 .modal-body h2 { margin: 0; font-size: 29px; letter-spacing: -.05em; }
 .map-link { margin-top: 11px; display: inline-flex; align-items: center; gap: 8px; color: var(--green); text-decoration: none; font-size: 10px; font-weight: 700; }
 .map-link:hover { text-decoration: underline; }
+.shopping-description { margin: 20px 32px 0; padding: 15px 17px; color: var(--ink-soft); background: #f3f3ed; border-left: 3px solid var(--yellow); font-size: 11px; line-height: 1.8; white-space: pre-line; }
 .modal-list { margin-top: 24px; display: grid; gap: 12px; }
 .detail-entry { padding: 14px; display: grid; grid-template-columns: 120px 1fr; gap: 15px; align-items: center; background: #f3f3ed; }
 .detail-entry img { width: 120px; height: 92px; object-fit: cover; background: var(--paper-deep); }
+.zoom-image-button { padding: 0; border: 0; border-radius: 3px; background: transparent; cursor: zoom-in; }
+.zoom-image-button:focus-visible { outline: 3px solid #d68d6e; outline-offset: 3px; }
+.zoom-image-button img { display: block; }
+.image-preview-modal { width: min(1100px, calc(100% - 24px)); max-width: none; max-height: 94vh; padding: 18px; overflow: auto; color: var(--ink); background: #f5f4ef; border: 0; border-radius: 6px; box-shadow: 0 28px 100px rgba(15,35,31,.32); }
+.image-preview-modal::backdrop { background: rgba(14,35,32,.82); backdrop-filter: blur(4px); }
+.image-preview-modal form { position: sticky; z-index: 2; top: 0; height: 0; margin: -8px -8px 8px; display: flex; justify-content: flex-end; }
+.image-preview-modal img { width: 100%; height: auto; max-height: calc(94vh - 70px); display: block; object-fit: contain; }
+.image-preview-modal p { margin: 10px 0 0; color: var(--muted); font-size: 11px; text-align: center; }
 .detail-entry h3 { margin: 0 0 5px; font-size: 13px; }
 .detail-entry p { margin: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.65; }
 .price-range { margin-top: 6px !important; color: #8d692e !important; font-weight: 700; }
@@ -289,9 +298,12 @@ button.schedule-card:focus-visible, .day-tab:focus-visible, a:focus-visible, but
   .text-size-label { font-size: 10px; }
   .text-size-options button { min-width: 34px; min-height: 34px; padding: 5px; }
   .detail-modal { width: calc(100% - 20px); max-height: 90vh; border-radius: 5px; }
+  .image-preview-modal { width: calc(100% - 12px); max-height: 96vh; padding: 8px; }
+  .image-preview-modal img { max-height: calc(96vh - 56px); }
   .modal-hero { height: 215px; }
   .modal-body { padding: 21px 18px 0; }
   .modal-body h2 { font-size: 24px; }
+  .shopping-description { margin: 18px 18px 0; padding: 12px 13px; }
   .detail-entry { grid-template-columns: 94px 1fr; gap: 11px; padding: 10px; }
   .detail-entry img { width: 94px; height: 80px; }
   .detail-entry h3 { font-size: 11px; }
