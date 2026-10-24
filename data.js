@@ -21,36 +21,35 @@ const TRIP_DATA = {
   schedule: [
     { id: "outbound-flight", date: "2026-10-29", time: "20:25 (한국 시간)", timeStatus: "확정", category: "기타", title: "나트랑행 항공편 출발", place: "대구공항", transport: "트리니티항공 · 대구 → 나트랑" },
     { id: "arrival", date: "2026-10-29", time: "23:35 (나트랑 시간)", timeStatus: "확정", category: "기타", title: "나트랑 도착", place: "나트랑 공항", transport: "트리니티항공" },
-    { id: "hotel-transfer-1", date: "2026-10-29", time: "도착 후 약 1시간", timeStatus: "대략", category: "기타", title: "호텔 이동", place: "하바나 나트랑 호텔", transport: "택시", note: "교통 상황에 따라 변동" },
+    { id: "hotel-transfer-1", date: "2026-10-29", time: "약 24:00", timeStatus: "대략", category: "기타", title: "호텔 이동", place: "하바나 나트랑 호텔", transport: "택시", note: "1시간 이동, 교통 상황에 따라 변동" },
     { id: "hotel-checkin-1", date: "2026-10-30", time: "약 01:00", timeStatus: "대략", category: "기타", title: "체크인 및 취침", place: "하바나 나트랑 호텔", note: "예상 체크인 시각" },
 
-    { id: "breakfast-1", date: "2026-10-30", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "havana-breakfast" },
-    { id: "hotel-departure-1", date: "2026-10-30", time: "약 10:30", timeStatus: "대략", category: "기타", title: "호텔 출발", place: "하바나 나트랑 호텔", transport: "도보", note: "11:00 식사 장소 도착 목표" },
+    { id: "breakfast-1", date: "2026-10-30", time: "08:00", timeStatus: "확정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "havana-breakfast" },
+    { id: "hotel-departure-1", date: "2026-10-30", time: "약 10:30", timeStatus: "대략", category: "기타", title: "호텔 출발", place: "하바나 나트랑 호텔", transport: "보도 예정", note: "11:00 식사 장소 도착 목표" },
     { id: "kuukuu-lunch", date: "2026-10-30", time: "11:00", timeStatus: "확정", category: "식사", title: "점심 식사", place: "쿠우쿠우", reservation: "예약 완료", detailId: "kuukuu" },
-    { id: "lotte-shopping", date: "2026-10-30", time: "약 12:30", timeStatus: "대략", category: "쇼핑", title: "마트 쇼핑", place: "롯데마트", transport: "도보 예정", detailId: "lotte-mart" },
-    { id: "dam-shopping", date: "2026-10-30", time: "약 14:00", timeStatus: "대략", category: "쇼핑", title: "시장 쇼핑", place: "담시장", transport: "도보 예정", detailId: "dam-market" },
-    { id: "massage-cafe-1", date: "2026-10-30", time: "15:00 이후 · 시간 미정", timeStatus: "시간 미정", category: "기타", title: "발 마사지 및 카페", place: "마사지샵·주변 카페", note: "샵과 예약 여부 미정" },
+    { id: "lotte-shopping", date: "2026-10-30", time: "약 12:30", timeStatus: "대략", category: "쇼핑", title: "마트 쇼핑", place: "롯데마트", detailId: "lotte-mart" },
+    { id: "dam-shopping", date: "2026-10-30", time: "약 14:00", timeStatus: "대략", category: "쇼핑", title: "시장 쇼핑", place: "담시장", detailId: "dam-market" },
+    { id: "massage-cafe-1", date: "2026-10-30", time: "약 15:00", timeStatus: "대략", category: "기타", title: "발 마사지 및 카페", place: "마사지샵·주변 카페" },
     { id: "moc-restaurant", date: "2026-10-30", time: "18:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "목식당", transport: "택시 예정", reservation: "예약 완료", detailId: "moc-restaurant" },
-    { id: "hotel-rooftop", date: "2026-10-30", time: "약 20:30", timeStatus: "대략", category: "기타", title: "루프탑 방문", place: "하바나 나트랑 호텔", transport: "택시 예정" },
+    { id: "hotel-rooftop", date: "2026-10-30", time: "약 20:30", timeStatus: "대략", category: "관광", title: "루프탑 방문", place: "하바나 나트랑 호텔", transport: "택시 예정", detailId: "havana-rooftop" },
 
-    { id: "breakfast-2", date: "2026-10-31", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "havana-breakfast" },
-    { id: "havana-checkout", date: "2026-10-31", time: "10:30", timeStatus: "확정", category: "기타", title: "체크아웃", place: "하바나 나트랑 호텔", note: "짐 보관·운반 방법 확인 필요" },
+    { id: "breakfast-2", date: "2026-10-31", time: "08:00", timeStatus: "확정", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "havana-breakfast" },
+    { id: "havana-checkout", date: "2026-10-31", time: "10:30", timeStatus: "확정", category: "기타", title: "체크아웃", place: "하바나 나트랑 호텔", note: "전세 버스 예정 (짐 보관)" },
     { id: "an-thoi-lunch", date: "2026-10-31", time: "11:00", timeStatus: "확정", category: "식사", title: "점심 식사", place: "안토이", transport: "전세 버스 예정", detailId: "an-thoi" },
-    { id: "long-son", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "1순위 관광 후보", place: "롱선사", detailId: "long-son-pagoda", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
-    { id: "ponagar", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "2순위 관광 후보", place: "포나가르 사원", detailId: "ponagar-towers", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
-    { id: "hon-chong", date: "2026-10-31", time: "12:30~14:00 사이", timeStatus: "대략", category: "관광", title: "3순위 관광 후보", place: "혼총곶", detailId: "hon-chong", note: "시간이 부족하면 우선순위에 따라 방문지 선택" },
+    { id: "hon-chong", date: "2026-10-31", time: "약 13:00", timeStatus: "대략", category: "관광", title: "혼총곶 방문", place: "혼총곶", transport: "전세 버스 예정", detailId: "hon-chong" },
     { id: "alibu-checkin", date: "2026-10-31", time: "14:00", timeStatus: "확정", category: "기타", title: "체크인", place: "알리부 리조트", transport: "전세 버스 예정" },
-    { id: "resort-time", date: "2026-10-31", time: "14:00~19:00", timeStatus: "계획 시간", category: "관광", title: "리조트 즐기기", place: "알리부 리조트", note: "스노클링·해변 이용 예정", detailId: "alibu-resort" },
+    { id: "resort-time", date: "2026-10-31", time: "14:00~18:00", timeStatus: "계획 시간", category: "관광", title: "리조트 즐기기", place: "알리부 리조트", note: "스노클링·해변 이용 예정", detailId: "alibu-resort" },
     { id: "veteran-departure", date: "2026-10-31", time: "18:30", timeStatus: "확정", category: "기타", title: "호텔 출발", place: "알리부 리조트", transport: "택시 · 베테랑까지 약 30분" },
     { id: "veteran-dinner", date: "2026-10-31", time: "19:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "베테랑", transport: "택시", reservation: "예약 완료", detailId: "veteran" },
     { id: "sailing-club", date: "2026-10-31", time: "21:00", timeStatus: "확정", category: "관광", title: "세일링클럽 방문", place: "세일링클럽", transport: "도보 예정", detailId: "sailing-club" },
     { id: "resort-return", date: "2026-10-31", time: "22:30", timeStatus: "시간 안내됨", category: "기타", title: "숙소 복귀", place: "알리부 리조트", transport: "택시 · 약 30분" },
 
-    { id: "breakfast-3", date: "2026-11-01", time: "시간 미정", timeStatus: "시간 미정", category: "식사", title: "조식 식사", place: "알리부 리조트", detailId: "alibu-breakfast" },
+    { id: "breakfast-3", date: "2026-11-01", time: "08:00", timeStatus: "확정", category: "식사", title: "조식 식사", place: "알리부 리조트", detailId: "alibu-breakfast" },
     { id: "alibu-checkout", date: "2026-11-01", time: "12:00", timeStatus: "확정", category: "기타", title: "체크아웃", place: "알리부 리조트", transport: "전일 대절 차량" },
     { id: "pho-hanh-phuc", date: "2026-11-01", time: "13:00", timeStatus: "시간 안내됨", category: "식사", title: "점심 식사", place: "포한푹", transport: "전일 대절 차량", detailId: "pho-hanh-phuc" },
-    { id: "free-time", date: "2026-11-01", time: "점심 후~17:00", timeStatus: "시간 미정", category: "기타", title: "일정 미정", place: "미정", note: "일정 확정 후 추가 예정" },
-    { id: "massage-final", date: "2026-11-01", time: "17:00", timeStatus: "확정", category: "기타", title: "마사지", place: "마사지샵 미정" },
+    { id: "long-son", date: "2026-11-01", time: "약 14:30", timeStatus: "대략", category: "관광", title: "롱선사 방문", place: "롱선사", transport: "전일 대절 차량", detailId: "long-son-pagoda" },
+    { id: "ponagar", date: "2026-11-01", time: "약 15:30", timeStatus: "대략", category: "관광", title: "포나가르 사원 방문", place: "포나가르 사원", transport: "전일 대절 차량", detailId: "ponagar-towers" },
+    { id: "massage-final", date: "2026-11-01", time: "17:00", timeStatus: "확정", category: "기타", title: "마사지", place: "마사지샵", transport: "전일 대절 차량" },
     { id: "chon-chon-kim", date: "2026-11-01", time: "19:00", timeStatus: "확정", category: "식사", title: "저녁 식사", place: "촌촌킴", transport: "전일 대절 차량", reservation: "예약 완료", detailId: "chon-chon-kim" },
     { id: "airport-departure", date: "2026-11-01", time: "21:00", timeStatus: "확정", category: "기타", title: "공항 출발", place: "나트랑 공항", transport: "전일 대절 차량" },
     { id: "airport-arrival", date: "2026-11-01", time: "약 22:00", timeStatus: "대략", category: "기타", title: "공항 도착 예정", place: "나트랑 공항" },
@@ -65,7 +64,7 @@ const TRIP_DATA = {
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Havana+Nha+Trang+Hotel",
       photo: "assets/restaurants/하바나메인.png",
       menus: [
-        { name: "하바나 호텔 조식", photo: "assets/menus/하바나1.png", description: "호텔 조식으로 든든하게 하루를 시작해요. 사진 속 다양한 메뉴를 살펴보고 취향에 맞게 골라 여유로운 아침을 즐겨보세요." }
+        { name: "하바나 호텔 조식", photo: "assets/menus/하바나1.png", description: "조식 운영 시간은 06:00~10:00입니다. 오전 8시에 든든하게 식사하며 여유롭게 하루를 시작해요." }
       ]
     },
     "alibu-breakfast": {
@@ -73,7 +72,7 @@ const TRIP_DATA = {
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Alibu+Resort+Nha+Trang",
       photo: "assets/restaurants/알리부메인.png",
       menus: [
-        { name: "알리부 리조트 조식", photo: "assets/menus/알리부1.png", description: "리조트에서 맞는 아침, 조식을 즐기며 여유롭게 하루를 시작해요. 사진 속 메뉴를 참고해 든든하게 식사하세요." }
+        { name: "알리부 리조트 조식", photo: "assets/menus/알리부1.png", description: "조식 운영 시간은 06:30~10:00입니다. 오전 8시에 리조트에서 여유로운 아침 식사를 즐겨요." }
       ]
     },
     "kuukuu": {
@@ -115,7 +114,7 @@ const TRIP_DATA = {
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Veteran+Restaurant+Nha+Trang",
       photo: "assets/restaurants/베테랑메인.jpeg",
       menus: [
-        { name: "한식", photo: "assets/menus/베테랑1.png", description: "다 맛있다는 후기가 있어요. 한식이 생각날 때 든든하게 즐겨보세요." }
+        { name: "한식", photo: "assets/menus/베테랑1.png", description: "다 맛있다는 후기가 있어요. 슬슬 한식이 그리워질 타이밍! 베테랑에서 힐링해보세요." }
       ]
     },
     "pho-hanh-phuc": {
@@ -167,39 +166,46 @@ const TRIP_DATA = {
   // 설명과 관람 시간은 화면 예시용 목업입니다. 실제 정보로 검증·수정하세요.
   attractions: {
     "long-son-pagoda": {
-      name: "롱선사 (목업)",
+      name: "롱선사",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Long+Son+Pagoda+Nha+Trang",
-      photo: "assets/attractions/attraction-mock.svg",
-      description: "나트랑의 사찰 관광지 카드 예시입니다. 정확한 역사·관람 안내는 확인 후 추가하세요.",
-      visitDuration: "목업: 약 30~60분"
+      photo: "assets/attractions/롱선사.png",
+      description: "입장료는 무료예요. 높이 24m의 대형 좌불상과 나트랑 시내 전경을 볼 수 있어요. 사원 방문 시 복장 규정이 있어 반바지는 피해주세요. 오토바이를 타고 올라가는 방법도 추천해요(왕복 5,000동).",
+      visitDuration: "보통 약 45분"
     },
     "ponagar-towers": {
-      name: "포나가르 사원 (목업)",
+      name: "포나가르 사원",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Po+Nagar+Cham+Towers+Nha+Trang",
-      photo: "assets/attractions/attraction-mock.svg",
-      description: "유적 관광지 설명 영역을 보여주는 임시 문구입니다. 검증한 소개로 바꿔주세요.",
-      visitDuration: "목업: 약 45~75분"
+      photo: "assets/attractions/포나가르 사원.png",
+      description: "풍요의 여신 포나가르를 모시는 힌두교 사원이에요. 아름다운 건축물을 감상하고, 카이강 하구와 나트랑 시내 풍경을 한눈에 볼 수 있어요.",
+      visitDuration: "보통 약 30분"
     },
     "hon-chong": {
-      name: "혼총곶 (목업)",
+      name: "혼총곶",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Hon+Chong+Nha+Trang",
-      photo: "assets/attractions/attraction-mock.svg",
-      description: "해안 관광지 카드의 임시 설명입니다. 방문 전 관람 정보와 이동 계획을 확인하세요.",
-      visitDuration: "목업: 약 30~60분"
+      photo: "assets/attractions/혼총곶.jpeg",
+      description: "바위 해안과 탁 트인 바다 전망을 가볍게 즐길 수 있는 풍경 좋은 관광지예요. 가족사진은 꼭 남기고, 햇빛을 가릴 양산도 챙겨가세요!",
+      visitDuration: "보통 약 1시간"
     },
     "alibu-resort": {
-      name: "알리부 리조트 (목업)",
+      name: "알리부 리조트",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Alibu+Resort+Nha+Trang",
-      photo: "assets/attractions/attraction-mock.svg",
-      description: "알리부 리조트에서 스노클링과 해변을 즐길 예정입니다. 이용 가능 시설과 운영 시간은 리조트에 확인해 주세요.",
-      visitDuration: "14:00~19:00 예정"
+      photo: "assets/attractions/알리부 리조트.png",
+      description: "야외 수영장 두 곳과 바다를 오가며 여유로운 시간을 보내요. 프라이빗 해변에서 스노클링은 필수! 전용 해변에서 스노클링 장비와 구명조끼를 무료로 대여할 수 있어요. 황홀한 경험이었다는 후기가 많은 곳이에요.",
+      visitDuration: "14:00~18:00 예정"
     },
     "sailing-club": {
-      name: "세일링클럽 (목업)",
+      name: "세일링클럽",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Sailing+Club+Nha+Trang",
-      photo: "assets/attractions/attraction-mock.svg",
-      description: "나트랑 해변에 있는 세일링클럽을 방문할 예정입니다. 영업 시간과 입장 조건은 방문 전에 확인해 주세요.",
-      visitDuration: "방문 시간에 따라 조정"
+      photo: "assets/attractions/세일링클럽.png",
+      description: "밤 야경과 흥겨운 음악, 눈을 사로잡는 불쇼를 즐겨요. 불쇼는 오후 10시부터 시작해 약 15분간 진행돼요. 음료는 무난하게 맛있고, 음식은 가격대가 높은 편이라고 해요.",
+      visitDuration: "불쇼 약 15분 (오후 10시 시작)"
+    },
+    "havana-rooftop": {
+      name: "하바나 호텔 루프탑",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Havana+Nha+Trang+Hotel+rooftop",
+      photo: "assets/attractions/루프탑.jpeg",
+      description: "저녁 식사 후 하바나 나트랑 호텔 루프탑을 방문해 나트랑의 야경을 즐겨요.",
+      visitDuration: "약 20:30 방문 예정"
     }
   }
 };

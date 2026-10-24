@@ -207,7 +207,7 @@
 
     const heroImage = document.createElement("img");
     heroImage.className = "modal-hero";
-    configureImage(heroImage, data.photo, `${data.name} 대표 사진`, "assets/cover/nhatrang-cover.svg");
+    configureImage(heroImage, data.photo, `${data.name} 대표 사진`, "assets/cover/nhatrang-cover.jpeg");
     modalContent.append(heroImage);
 
     const body = makeElement("div", "modal-body");
