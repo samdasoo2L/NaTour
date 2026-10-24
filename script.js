@@ -235,6 +235,27 @@
     modal.querySelector(".modal-close")?.focus();
   }
 
+  function openFlightTicket() {
+    lastFocusedElement = document.activeElement;
+    modalContent.replaceChildren();
+
+    const image = document.createElement("img");
+    image.className = "modal-hero flight-ticket-image";
+    configureImage(image, "assets/cover/비행기표.jpeg", "왕복 항공권 사진", "assets/cover/nhatrang-cover.jpeg");
+    modalContent.append(image);
+
+    const body = makeElement("div", "modal-body");
+    const title = makeElement("h2", "", "항공권");
+    title.id = "modal-title";
+    body.append(title);
+    modalContent.append(body);
+
+    applyTextSize();
+    if (!modal.open) modal.showModal();
+    document.body.classList.add("modal-open");
+    modal.querySelector(".modal-close")?.focus();
+  }
+
   function renderMealContent(body, data) {
     const list = makeElement("div", "modal-list");
     (data.menus || []).forEach(menu => {
@@ -281,6 +302,7 @@
     if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
   });
   modal.querySelector(".modal-close")?.addEventListener("click", () => modal.close());
+  document.querySelector(".flight-ticket-button")?.addEventListener("click", openFlightTicket);
 
   activeIndex = initialDayIndex();
   renderTabs();
