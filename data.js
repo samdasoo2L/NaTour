@@ -77,7 +77,7 @@ const TRIP_DATA = {
     },
     "kuukuu": {
       name: "쿠우쿠우",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Kuu+Kuu+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/3p8PRkm9mazzVdXm8?g_st=ic",
       photo: "assets/restaurants/쿠우쿠우메인.jpeg",
       menus: [
         { name: "해산물 뷔페", photo: "assets/menus/쿠우쿠우1.jpeg", description: "맛있는 메뉴를 잘 찾아서 먹어보세요. 맛있는 음식을 발견하면 서로 공유하기!" }
@@ -85,7 +85,7 @@ const TRIP_DATA = {
     },
     "moc-restaurant": {
       name: "목식당",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Moc+Seafood+Restaurant+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/f5JPEdVGNekSchTe7?g_st=ic",
       photo: "assets/restaurants/목식당메인.jpeg",
       menus: [
         { name: "맛조개 모닝글로리", photo: "assets/menus/목식당1.png", description: "짭조름한 모닝글로리 볶음에 큼직한 맛조개가 들어가 반찬으로 딱이에요." },
@@ -97,7 +97,7 @@ const TRIP_DATA = {
     },
     "an-thoi": {
       name: "안토이",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=An+Thoi+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/Qj5B78Vt3iEs4v2M6?g_st=ic",
       photo: "assets/restaurants/안토이메인.png",
       menus: [
         { name: "치즈 얹은 가리비", photo: "assets/menus/안토이1.png", description: "고소하고 맛있어요. 뜨끈할 때 먹는 것을 추천해요!" },
@@ -119,7 +119,7 @@ const TRIP_DATA = {
     },
     "pho-hanh-phuc": {
       name: "포한푹",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Pho+Hanh+Phuc+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/JDDKAZ5MJropJFt98?g_st=ic",
       photo: "assets/restaurants/포한푹메인.jpeg",
       menus: [
         { name: "뚝배기 쌀국수", photo: "assets/menus/포한푹1.jpeg", description: "샤브샤브처럼 고기를 넣어 익혀 먹는 방식이에요. 갈비탕처럼 깊은 맛이 나는 쌀국수라고 해요." }
@@ -144,7 +144,7 @@ const TRIP_DATA = {
   shopping: {
     "lotte-mart": {
       name: "롯데마트 추천 쇼핑",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/yNre7ciHtE8AXi469?g_st=ipc",
       photo: "assets/shopping/롯데마트메인.jpeg",
       items: [
         { name: "코코넛칩", photo: "assets/shopping/롯데마트1.png", description: "바삭하고 고소해서 정말 맛있어요." },
@@ -206,7 +206,7 @@ const TRIP_DATA = {
     },
     "hon-chong": {
       name: "혼총곶",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Hon+Chong+Nha+Trang",
+      mapUrl: "https://maps.app.goo.gl/nu1H7jYJaevZnF7m8?g_st=ic",
       photo: "assets/attractions/혼총곶.jpeg",
       description: "바위 해안과 탁 트인 바다 전망을 가볍게 즐길 수 있는 풍경 좋은 관광지예요. 가족사진은 꼭 남기고, 햇빛을 가릴 양산도 챙겨가세요!",
       visitDuration: "보통 약 1시간"
