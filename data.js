@@ -25,7 +25,7 @@ const TRIP_DATA = {
     { id: "hotel-checkin-1", date: "2026-10-30", time: "약 01:00", timeStatus: "대략", category: "기타", title: "체크인 및 취침", place: "하바나 나트랑 호텔", note: "예상 체크인 시각" },
 
     { id: "breakfast-1", date: "2026-10-30", time: "약 8:00", timeStatus: "대략", category: "식사", title: "조식 식사", place: "하바나 나트랑 호텔", detailId: "havana-breakfast" },
-    { id: "hotel-departure-1", date: "2026-10-30", time: "약 10:30", timeStatus: "대략", category: "기타", title: "호텔 출발", place: "하바나 나트랑 호텔", transport: "보도 예정", note: "11:00 식사 장소 도착 목표" },
+    { id: "hotel-departure-1", date: "2026-10-30", time: "약 10:30", timeStatus: "대략", category: "기타", title: "호텔 출발", place: "하바나 나트랑 호텔", transport: "도보 예정", note: "11:00 식사 장소 도착 목표" },
     { id: "kuukuu-lunch", date: "2026-10-30", time: "11:00", timeStatus: "확정", category: "식사", title: "점심 식사", place: "쿠우쿠우", reservation: "예약 완료", detailId: "kuukuu" },
     { id: "lotte-shopping", date: "2026-10-30", time: "약 12:30", timeStatus: "대략", category: "쇼핑", title: "마트 쇼핑", place: "롯데마트", detailId: "lotte-mart" },
     { id: "dam-shopping", date: "2026-10-30", time: "약 14:00", timeStatus: "대략", category: "쇼핑", title: "시장 쇼핑", place: "담시장", detailId: "dam-market" },
